@@ -2,7 +2,7 @@ import { ImageWithFallback } from './figma/ImageWithFallback';
 import { ArrowRight, Factory, TestTube, Users } from 'lucide-react';
 import { motion } from 'motion/react';
 import { useNavigate, useParams } from 'react-router-dom';
-import factoryImage from "../assets/images/factory.png"
+
 
 
 export function AboutSnapshot() {
@@ -21,7 +21,7 @@ export function AboutSnapshot() {
             className="overflow-hidden rounded-lg group"
           >
             <ImageWithFallback
-              src={factoryImage}
+              src='/images/factory.png'
               alt="AR Laminators Facility"
               className="rounded-lg shadow-lg w-full h-[500px] object-cover transition-transform duration-500 group-hover:scale-110"
             />

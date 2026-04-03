@@ -3,11 +3,10 @@ import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import hero1 from "../assets/images/industry.jpg";
-import hero2 from "../assets/images/hero2.jpg";
+
 const slides = [
   {
-    image: hero1,
+    image: '/images/industry.jpg',
     headline: "Leaders in Anti-Corrosive Pipe Protection & Waterproofing Solutions",
     subheadline: "Protecting infrastructure since 1991 with high-performance membranes, tapes, and industrial coatings.",
     highlights: [
@@ -21,7 +20,7 @@ const slides = [
     ]
   },
   {
-    image: hero2,
+    image: '/images/hero2.jpg',
     headline: "Engineered Protection That Lasts Decades",
     subheadline: "Advanced waterproofing systems and corrosion protection solutions designed for extreme environments.",
     highlights: [],

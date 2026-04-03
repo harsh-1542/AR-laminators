@@ -1,7 +1,6 @@
 import { motion } from 'motion/react';
 import { Target, Factory, Users, Award } from 'lucide-react';
-import about from "../assets/images/about.png";
-import mission from "../assets/images/mission.jpg";
+
 import { ClientLogos } from '../components/ClientLogos';
 
 const clientLogos = [
@@ -26,7 +25,9 @@ export function AboutPage() {
       <section 
         className="py-32 relative bg-cover bg-center" 
         style={{ 
-          backgroundImage: `url(${about})`,
+          backgroundImage: 'url(/images/aboutpage.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
           fontFamily: 'Montserrat, sans-serif' 
         }}
       >
@@ -123,7 +124,7 @@ export function AboutPage() {
     {/* Image */}
     <div className="flex justify-end">
       <img
-        src={mission}
+        src= '/images/mission.jpg'
         alt="Mission"
         className="w-full md:w-[70%] h-[400px] md:h-[500px] object-cover"
       />

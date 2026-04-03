@@ -1,12 +1,7 @@
 import { Droplets, Shield, Paintbrush, StickyNote, Route, Construction, Plus } from 'lucide-react';
 import { motion } from 'motion/react';
 import { useNavigate } from 'react-router-dom';
-import waterproofing from '../assets/images/Waterproofing-Membranes.png';
-import Primers from '../assets/images/Primers.jpg';
-import Paints from '../assets/images/Paints.png';
-import Sealants from '../assets/images/sealant.png';
-import Road from '../assets/images/road.png';
-import Pipeline from '../assets/images/pipeline.png';
+
 
 
 const products = [
@@ -14,37 +9,37 @@ const products = [
     icon: Paintbrush,
     name: 'Primers & Bonding Agents',
     description: 'High-performance primers designed to enhance adhesion and prepare surfaces for waterproofing systems.',
-    image: Primers
+    image: '/images/primer.png',
   },
   {
     icon: Droplets,
     name: 'Waterproofing Membranes',
     description: 'APP, SBS, and self-adhesive membranes engineered for roofs, basements, and structures.',
-    image: waterproofing
+    image: '/images/Waterproofing-Membranes.png',
   },
   {
     icon: Shield,
     name: 'Protective Coatings & Paints',
     description: 'Advanced coatings for corrosion protection in industrial and marine environments.',
-    image: Paints
+    image: '/images/Paints.png',
   },
   {
     icon: StickyNote,
     name: 'Sealants & Tapes',
     description: 'Reliable sealing solutions for joints, cracks, and leak prevention.',
-    image: Sealants
+    image: '/images/sealant.png',
   },
   {
     icon: Route,
     name: 'Road & Pavement Solutions',
     description: 'Durable bitumen products for road construction, repair, and maintenance.',
-    image: Road
+    image: '/images/road.png',
   },
   {
     icon: Construction,
     name: 'Pipeline & Tank Protection',
     description: 'Specialized systems for underground pipelines and storage infrastructure.',
-    image: Pipeline
+    image: '/images/pipeline.png',
   }
 ];
 

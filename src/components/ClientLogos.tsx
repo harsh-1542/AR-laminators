@@ -1,19 +1,15 @@
 import { motion, AnimatePresence } from 'motion/react';
 import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import adani from '../assets/images/adani_power.jpg';
-import siemens from '../assets/images/siemens.png';
-import mega from '../assets/images/megha.png';
-import ntpc from '../assets/images/ntpc.png';
-import tata from '../assets/images/tata.png';
+
 
 
 const companies = [
-  { name: 'Adani Power', logo: adani },
-  { name: 'Siemens', logo: siemens },
-  { name: 'Megha Engineering', logo: mega },
-  { name: 'NTPC', logo: ntpc },
-  { name: 'Tata Projects', logo: tata }
+  { name: 'Adani Power', logo: '/images/adani_power.jpg' },
+  { name: 'Siemens', logo: '/images/siemens.png' },
+  { name: 'Megha Engineering', logo: '/images/megha.png' },
+  { name: 'NTPC', logo: '/images/ntpc.png' },
+  { name: 'Tata Projects', logo: '/images/tata.png' }
 ];
 
 export function ClientLogos() {
