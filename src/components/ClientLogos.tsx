@@ -7,7 +7,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 const companies = [
   { name: 'Adani Power', logo: '/images/adani_power.jpg' },
   { name: 'Siemens', logo: '/images/siemens.png' },
-  { name: 'Megha Engineering', logo: '/images/megha.png' },
+  { name: 'Megha Engineering', logo: '/images/Megha.png' },
   { name: 'NTPC', logo: '/images/ntpc.png' },
   { name: 'Tata Projects', logo: '/images/tata.png' }
 ];
