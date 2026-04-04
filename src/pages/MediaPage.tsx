@@ -79,19 +79,35 @@ const events = [
 export function MediaPage() {
   return (
     <div className="pt-32 pb-20">
+      {/* Hero Section */}
+      <section 
+        className="py-32 relative bg-cover bg-center mb-12" 
+        style={{ 
+          backgroundImage: 'url(/images/mediapage.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          fontFamily: 'Montserrat, sans-serif' 
+        }}
+      >
+        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="max-w-7xl mx-auto px-4 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center"
+          >
+            <h1 className="text-5xl md:text-6xl font-bold mb-6" style={{ color: '#F5F0E8' }}>
+              Media & News
+            </h1>
+            <p className="text-xl md:text-2xl" style={{ color: '#F5F0E8' }}>
+              Latest updates, press releases, and news about AR Laminators
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
       <div className="max-w-7xl mx-auto px-4">
-        {/* Page Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-12"
-        >
-          <h1 className="text-5xl font-bold text-gray-900 mb-4">Media & News</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Latest updates, press releases, and news about AR Laminators
-          </p>
-        </motion.div>
 
         {/* News Articles */}
         <section className="mb-20">
@@ -102,7 +118,7 @@ export function MediaPage() {
             viewport={{ once: true }}
             className="mb-8"
           >
-            <h2 className="text-3xl font-bold text-gray-900">Latest News</h2>
+            <h2 className="text-3xl font-bold text-gray-900">Social Media Post</h2>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

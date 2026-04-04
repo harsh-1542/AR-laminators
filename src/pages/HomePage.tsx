@@ -10,6 +10,8 @@ import { WhyChooseUs } from '../components/WhyChooseUs';
 import { CTABanner } from '../components/CTABanner';
 import { ContactPreview } from '../components/ContactPreview';
 import { CertificationsStrip } from '../components/CertificationsStrip';
+import { ParallaxImageDivider } from '../components/ParallaxImageDivider';
+import { ProductsAnimate } from './ProductsAnimate';
 
 export function HomePage() {
   // const factoryImage = "https://images.unsplash.com/photo-1675093022653-59233299f8ba?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGVtaWNhbCUyMG1hbnVmYWN0dXJpbmclMjBmYWNpbGl0eSUyMHBsYW50fGVufDF8fHx8MTc3NDcyMDgwN3ww&ixlib=rb-4.1.0&q=80&w=1080";
@@ -19,15 +21,18 @@ export function HomePage() {
       <HeroSection />
       <ClientLogos />
       <AboutSnapshot />
+      <ParallaxImageDivider />
       <ProductCategories />
       {/* <FeaturedProducts /> */}
+      {/* demo */}
+      <ProductsAnimate />
       <ApplicationAreas />
       <Services />
       <TechnicalProcess />
       <WhyChooseUs />
       <CTABanner />
-      <ContactPreview />
-      <CertificationsStrip />
+      {/* <ContactPreview />
+      <CertificationsStrip /> */}
     </div>
   );
 }

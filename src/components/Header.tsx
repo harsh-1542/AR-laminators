@@ -141,7 +141,7 @@ export function Header() {
                 className="text-white px-6 py-2.5 rounded font-normal transition-all duration-300 hover:shadow-lg hover:scale-105"
                 style={{ backgroundColor: '#7C1823' }}
               >
-                Contact Us
+                Get In Touch
               </button>
             </div>
 

@@ -62,7 +62,7 @@ export function HeroSection() {
   const slide = slides[currentSlide];
 
   return (
-    <section className="relative h-screen min-h-[600px] overflow-hidden">
+    <section className="relative h-screen min-h-[600px]  overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 bg-black">
         <AnimatePresence>

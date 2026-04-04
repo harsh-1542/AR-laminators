@@ -20,19 +20,35 @@ export function ContactPage() {
 
   return (
     <div className="pt-32 pb-20">
+      {/* Hero Section */}
+      <section 
+        className="py-32 relative bg-cover bg-center mb-12" 
+        style={{ 
+          backgroundImage: 'url(/images/contactpage.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          fontFamily: 'Montserrat, sans-serif' 
+        }}
+      >
+        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="max-w-7xl mx-auto px-4 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center"
+          >
+            <h1 className="text-5xl md:text-6xl font-bold mb-6" style={{ color: '#F5F0E8' }}>
+              Contact Us
+            </h1>
+            <p className="text-xl md:text-2xl" style={{ color: '#F5F0E8' }}>
+              Get in touch with our team for technical consultation, project inquiries, or any questions
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
       <div className="max-w-7xl mx-auto px-4">
-        {/* Page Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-12"
-        >
-          <h1 className="text-5xl font-bold text-gray-900 mb-4">Contact Us</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Get in touch with our team for technical consultation, project inquiries, or any questions
-          </p>
-        </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Left - Contact Form */}
@@ -150,13 +166,7 @@ export function ContactPage() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="space-y-8"
           >
-            {/* Map Placeholder */}
-            <div className="bg-gray-200 h-80 rounded-lg flex items-center justify-center">
-              <div className="text-center">
-                <MapPin className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-                <p className="text-gray-600 font-semibold">Map Location</p>
-              </div>
-            </div>
+        
 
             {/* Contact Details */}
             <div className="bg-white p-8 rounded-lg border-2 border-gray-200 shadow-lg">
@@ -220,28 +230,16 @@ export function ContactPage() {
               </div>
             </div>
 
-            {/* Regional Offices */}
-            <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
-              <h4 className="font-bold text-gray-900 mb-4">Regional Offices</h4>
-              <div className="space-y-3 text-sm">
-                <div>
-                  <p className="font-semibold text-gray-800">Delhi</p>
-                  <p className="text-gray-600">+91 11 XXXX XXXX</p>
-                </div>
-                <div>
-                  <p className="font-semibold text-gray-800">Bangalore</p>
-                  <p className="text-gray-600">+91 80 XXXX XXXX</p>
-                </div>
-                <div>
-                  <p className="font-semibold text-gray-800">Pune</p>
-                  <p className="text-gray-600">+91 20 XXXX XXXX</p>
-                </div>
-                <div>
-                  <p className="font-semibold text-gray-800">Kolkata</p>
-                  <p className="text-gray-600">+91 33 XXXX XXXX</p>
-                </div>
+                
+                {/* Map Placeholder */}
+                <div className="bg-gray-200 h-80 rounded-lg flex items-center justify-center">
+              <div className="text-center">
+                <MapPin className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+                <p className="text-gray-600 font-semibold">Map Location</p>
               </div>
             </div>
+
+          
           </motion.div>
         </div>
       </div>
