@@ -31,9 +31,9 @@ const labCapabilities = [
 
 export function QualityPage() {
   return (
-    <div className="pt-32 pb-20">
+    <div className="py-20">
       {/* Hero Section */}
-      <section className="relative h-[400px] bg-gray-900 mb-12">
+      <section className="relative h-[300px] bg-gray-900 mb-12">
         <ImageWithFallback
           src="https://images.unsplash.com/photo-1764675902997-56502dddd608?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwbWFudWZhY3R1cmluZyUyMGZhY2lsaXR5fGVufDF8fHx8MTc3MDQ2MjA5N3ww&ixlib=rb-4.1.0&q=80&w=1080"
           alt="Quality & Certifications"

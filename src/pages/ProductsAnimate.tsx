@@ -95,7 +95,7 @@ export function ProductsAnimate() {
            viewport={{ once: true }}
            className="text-left mb-5 flex flex-col items-start"
         >
-          <h2 className="text-2xl md:text-4xl font-semibold uppercase mb-4 tracking-wide" style={{ color: '#862e38ff', fontFamily: 'Montserrat, sans-serif' }}>
+          <h2 className="text-2xl md:text-4xl font-semibold uppercase mb-4  tracking-wide" style={{ color: '#862e38ff', fontFamily: 'Montserrat, sans-serif' }}>
             Our Product Line
           </h2>
           <div className="w-16 h-[3px]" style={{ backgroundColor: '#862e38ff' }}></div>
@@ -108,7 +108,7 @@ export function ProductsAnimate() {
       <div className="w-full relative">
         <div 
           ref={containerRef} 
-          className="flex flex-nowrap gap-6 md:gap-8 px-4 md:px-8 lg:px-[max(2rem,calc((100vw-80rem)/2))] w-max will-change-transform items-start mt-6"
+          className="flex flex-nowrap gap-6 md:gap-8 px-4 md:px-8 lg:px-[max(2rem,calc((100vw-80rem)/2))] w-max will-change-transform items-start mt-4"
         >
           {products.map((product, index) => {
             return (

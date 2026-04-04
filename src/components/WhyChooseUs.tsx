@@ -1,5 +1,22 @@
 import { Award, CheckCircle, Package, Users, Lightbulb } from 'lucide-react';
-import { motion } from 'motion/react';
+import { motion, useInView, useMotionValue, useTransform, animate } from 'motion/react';
+import { useEffect, useRef } from 'react';
+
+function AnimatedCounter({ value, suffix = '', duration = 2 }: { value: number; suffix?: string; duration?: number }) {
+  const ref = useRef<HTMLSpanElement>(null);
+  const isInView = useInView(ref, { once: true, margin: "-50px" });
+  const count = useMotionValue(0);
+  const rounded = useTransform(count, (latest) => Math.round(latest).toString() + suffix);
+
+  useEffect(() => {
+    if (isInView) {
+      const controls = animate(count, value, { duration, ease: "easeOut" });
+      return controls.stop;
+    }
+  }, [value, isInView, duration, count]);
+
+  return <motion.span ref={ref}>{rounded}</motion.span>;
+}
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
 const features = [
@@ -111,7 +128,7 @@ export function WhyChooseUs() {
               className="relative w-full max-w-lg aspect-square lg:aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.4)] border border-white/10 group cursor-pointer flex items-center justify-center transition-all duration-700 hover:scale-[1.02] hover:-translate-y-2 hover:shadow-[0_25px_80px_rgba(0,0,0,0.5)] bg-black/20"
             >
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1541888081691-0f72f62b48d2?q=80&w=1000&auto=format&fit=crop"
+                src="/images/skyscraper.png"
                 alt="Infrastructure Partner"
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-90 group-hover:opacity-100"
               />
@@ -130,19 +147,27 @@ export function WhyChooseUs() {
           style={{ borderTop: '1px solid rgba(245, 240, 232, 0.2)' }}
         >
           <div className="text-center">
-            <div className="text-5xl font-bold mb-2" style={{ color: '#F5F0E8' }}>30+</div>
+            <div className="text-5xl font-bold mb-2" style={{ color: '#F5F0E8' }}>
+              <AnimatedCounter value={30} suffix="+" />
+            </div>
             <div className="text-lg" style={{ color: '#F5F0E8', opacity: 0.8 }}>Years Experience</div>
           </div>
           <div className="text-center">
-            <div className="text-5xl font-bold mb-2" style={{ color: '#F5F0E8' }}>500+</div>
+            <div className="text-5xl font-bold mb-2" style={{ color: '#F5F0E8' }}>
+              <AnimatedCounter value={500} suffix="+" />
+            </div>
             <div className="text-lg" style={{ color: '#F5F0E8', opacity: 0.8 }}>Projects Completed</div>
           </div>
           <div className="text-center">
-            <div className="text-5xl font-bold mb-2" style={{ color: '#F5F0E8' }}>100+</div>
+            <div className="text-5xl font-bold mb-2" style={{ color: '#F5F0E8' }}>
+              <AnimatedCounter value={100} suffix="+" />
+            </div>
             <div className="text-lg" style={{ color: '#F5F0E8', opacity: 0.8 }}>Products</div>
           </div>
           <div className="text-center">
-            <div className="text-5xl font-bold mb-2" style={{ color: '#F5F0E8' }}>24/7</div>
+            <div className="text-5xl font-bold mb-2" style={{ color: '#F5F0E8' }}>
+              <AnimatedCounter value={24} suffix="/7" />
+            </div>
             <div className="text-lg" style={{ color: '#F5F0E8', opacity: 0.8 }}>Support</div>
           </div>
         </motion.div>

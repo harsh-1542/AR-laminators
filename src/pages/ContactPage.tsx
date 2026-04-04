@@ -22,15 +22,10 @@ export function ContactPage() {
     <div className="pt-32 pb-20">
       {/* Hero Section */}
       <section 
-        className="py-32 relative bg-cover bg-center mb-12" 
-        style={{ 
-          backgroundImage: 'url(/images/contactpage.png)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          fontFamily: 'Montserrat, sans-serif' 
-        }}
+        className="py-20 relative bg-cover bg-center mb-12" 
+        
       >
-        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="absolute bg-[#7C1823]/80 inset-0" ></div>
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

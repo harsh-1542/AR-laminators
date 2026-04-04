@@ -119,7 +119,7 @@ const categoryNames: Record<string, string> = {
   'pipeline-tank': 'Pipeline & Tank Protection'
 };
 
-export function ProductListPage() {
+export function   ProductListPage() {
   const navigate = useNavigate();
   const params = useParams();
   const categoryId = params.category || 'primers-bonding';
@@ -159,7 +159,7 @@ export function ProductListPage() {
 
         <div className="flex gap-8">
           {/* Left Sidebar - Filters */}
-          <div className="w-64 flex-shrink-0 hidden lg:block">
+          {/* <div className="w-64 flex-shrink-0 hidden lg:block">
             <div 
               className="sticky top-36 rounded-lg p-6 shadow-lg"
               style={{ backgroundColor: 'white', border: '2px solid #C8CBCE' }}
@@ -199,7 +199,7 @@ export function ProductListPage() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* Right Section - Product Cards Grid */}
           <div className="flex-1">
@@ -210,7 +210,7 @@ export function ProductListPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  onClick={() => navigate('product-detail', { productId: product.id, category: categoryId })}
+                  onClick={() => navigate(`/product/${product.id}`)}
                   className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-all cursor-pointer group"
                   style={{ border: '2px solid #C8CBCE' }}
                 >

@@ -20,9 +20,9 @@ export function HomePage() {
     <div>
       <HeroSection />
       <ClientLogos />
-      <AboutSnapshot />
+      {/* <AboutSnapshot /> */}
       <ParallaxImageDivider />
-      <ProductCategories />
+      {/* <ProductCategories /> */}
       {/* <FeaturedProducts /> */}
       {/* demo */}
       <ProductsAnimate />

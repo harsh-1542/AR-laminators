@@ -81,7 +81,7 @@ export function MediaPage() {
     <div className="pt-32 pb-20">
       {/* Hero Section */}
       <section 
-        className="py-32 relative bg-cover bg-center mb-12" 
+        className="py-20 relative bg-cover bg-center mb-12" 
         style={{ 
           backgroundImage: 'url(/images/mediapage.png)',
           backgroundSize: 'cover',

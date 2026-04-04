@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Target, Factory, Users, Award } from 'lucide-react';
+import { Target, Factory, Users, Award, Lightbulb } from 'lucide-react';
 
 import { ClientLogos } from '../components/ClientLogos';
 
@@ -118,68 +118,141 @@ export function AboutPage() {
         </div>
       </section>
       */}
-<section className="py-20">
-  <motion.div className="max-w-7xl mx-auto px-4 relative">
-
-    {/* Image */}
-    <div className="flex justify-end">
-      <img
-        src= '/images/mission.jpg'
-        alt="Mission"
-        className="w-full md:w-[70%] h-[400px] md:h-[500px] object-cover"
-      />
-    </div>
-
-    {/* Floating Content Box */}
-    <div className="absolute top-1/2 left-1/2 md:left-4 lg:left-8 -translate-x-1/2 md:translate-x-0 -translate-y-1/2 bg-white p-8 md:p-10 w-[90%] md:w-[420px] lg:w-[460px] shadow-lg">
+<section className="py-24 bg-white overflow-hidden">
+  <div className="max-w-7xl mx-auto px-4">
+    <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-8">
       
-      <h2 className="text-4xl md:text-5xl font-extrabold text-[#7C1823] mb-4">
-        Our Mission
-      </h2>
-
-      <p className="text-base md:text-lg text-gray-800 leading-relaxed mb-2 md:mb-6">
-        To provide long-lasting protection for national infrastructure through high-bonding, durable, and environmentally responsible materials.
-      </p>
-
-    </div>
-
-  </motion.div>
-</section>
-
-      {/* <section className="py-20 bg-white">
-        <div className="max-w-5xl mx-auto px-4">
-
-          
-          {/* <div className="mb-12">
-            <h2 className="text-4xl font-semibold text-gray-900 mb-3">
-              Our Mission
-            </h2>
-            <div className="w-16 h-1 bg-[#7C1823]"></div>
-          </div> */}
-
-          
-          {/* <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="flex items-start gap-6"
-          >
-           
-            <div className="mt-1">
-              <Target className="w-10 h-10 text-[#7C1823]" />
+      {/* Left Content Column */}
+      <div className="w-full lg:w-5/12 lg:pr-8">
+        
+        {/* Diamond Header */}
+        <div className="mb-14">
+          <div className="flex items-center gap-2 mb-3">
+            <div className="flex gap-1.5">
+              <div className="w-2.5 h-2.5 bg-[#7C1823] rotate-45"></div>
+              <div className="w-2.5 h-2.5 bg-[#7C1823] rotate-45"></div>
+              <div className="w-2.5 h-2.5 bg-[#7C1823] rotate-45"></div>
             </div>
+          </div>
+          <h2 className="text-5xl md:text-6xl font-extrabold text-gray-900 mb-4 tracking-tight">Our Mission</h2>
+          <div className="flex items-center gap-3">
+            <div className="h-[2px] bg-gray-200 w-16"></div>
+            <div className="flex gap-1.5">
+              <div className="w-2.5 h-2.5 bg-[#7C1823] rotate-45"></div>
+              <div className="w-2.5 h-2.5 bg-[#7C1823] rotate-45"></div>
+              <div className="w-2.5 h-2.5 bg-[#7C1823] rotate-45"></div>
+            </div>
+            <div className="h-[2px] bg-gray-200 w-16"></div>
+          </div>
+        </div>
 
+        {/* List Items */}
+        <div className="space-y-10">
           
-            <div className="border-l-4 border-[#7C1823] pl-6">
-              <p className="text-lg text-gray-700 leading-relaxed">
-                To provide long-lasting protection for national infrastructure through
-                high-bonding, durable, and environmentally responsible materials.
+          {/* Vision */}
+          <motion.div 
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="flex items-start gap-6 group"
+          >
+            <div className="w-16 h-16 flex-shrink-0 border-2 border-gray-200 rounded-2xl rotate-45 flex items-center justify-center transition-all duration-300 group-hover:border-[#7C1823] mt-2 group-hover:bg-[#7C1823]/5">
+              <div className="-rotate-45">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="text-[#7C1823]"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+              </div>
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">Vision</h3>
+              <p className="text-gray-500 text-lg leading-relaxed">
+                To be the global leader in providing innovative and sustainable infrastructure protection solutions.
               </p>
             </div>
           </motion.div>
+
+          {/* Missions */}
+          <motion.div 
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            viewport={{ once: true }}
+            className="flex items-start gap-6 group"
+          >
+            <div className="w-16 h-16 flex-shrink-0 border-2 border-gray-200 rounded-2xl rotate-45 flex items-center justify-center transition-all duration-300 group-hover:border-[#7C1823] mt-2 group-hover:bg-[#7C1823]/5">
+              <div className="-rotate-45">
+                <Lightbulb className="w-7 h-7 text-[#7C1823]" strokeWidth={2.5} />
+              </div>
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">Missions</h3>
+              <p className="text-gray-500 text-lg leading-relaxed">
+                To provide long-lasting protection for national infrastructure through high-bonding, durable materials.
+              </p>
+            </div>
+          </motion.div>
+
+          {/* Goals */}
+          <motion.div 
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="flex items-start gap-6 group"
+          >
+            <div className="w-16 h-16 flex-shrink-0 border-2 border-gray-200 rounded-2xl rotate-45 flex items-center justify-center transition-all duration-300 group-hover:border-[#7C1823] mt-2 group-hover:bg-[#7C1823]/5">
+              <div className="-rotate-45">
+                <Target className="w-7 h-7 text-[#7C1823]" strokeWidth={2.5} />
+              </div>
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">Goals</h3>
+              <p className="text-gray-500 text-lg leading-relaxed">
+                Continuously pushing the boundaries of R&D to set new international benchmarks in quality.
+              </p>
+            </div>
+          </motion.div>
+
         </div>
-      </section> */}
+      </div>
+
+      {/* Right Image Collage */}
+      <div className="w-full lg:w-7/12 flex justify-center mt-12 md:mt-16 lg:mt-0 xl:-mr-12">
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+          className="relative w-full max-w-[550px] aspect-square mx-auto lg:mr-0"
+        >
+          {/* Top Diamond */}
+          <div className="absolute top-[6%] left-[34%] -translate-x-[50%] w-[38%] aspect-square rounded-[2rem] md:rounded-[2.5rem] bg-gray-200 rotate-45 overflow-hidden shadow-lg z-10 hover:scale-105 transition-transform duration-500">
+            <img src="https://images.unsplash.com/photo-1541888081691-0f72f62b48d2?w=800&auto=format&fit=crop" className="w-full h-full object-cover -rotate-45 scale-[1.4]" alt="Infrastructure" />
+            <div className="absolute inset-0 bg-[#7C1823]/20 mix-blend-multiply"></div>
+          </div>
+          
+          {/* Left Diamond */}
+          <div className="absolute top-[50%] left-[2%] -translate-y-[50%] w-[38%] aspect-square rounded-[2rem] md:rounded-[2.5rem] bg-gray-200 rotate-45 overflow-hidden shadow-lg z-10 hover:scale-105 transition-transform duration-500">
+            <img src="/images/contactpage.png" className="w-full h-full object-cover -rotate-45 scale-[1.4]" alt="Workers" />
+            <div className="absolute inset-0 bg-black/10"></div>
+          </div>
+
+          {/* Bottom Diamond */}
+          <div className="absolute bottom-[6%] left-[34%] -translate-x-[50%] w-[38%] aspect-square rounded-[2rem] md:rounded-[2.5rem] bg-gray-200 rotate-45 overflow-hidden shadow-lg z-10 hover:scale-105 transition-transform duration-500">
+            <img src="/images/waterproofing.png" className="w-full h-full object-cover -rotate-45 scale-[1.4]" alt="Application" />
+            <div className="absolute inset-0 bg-black/10"></div>
+          </div>
+
+          {/* Right Huge Diamond */}
+          <div className="absolute top-[50%] left-[42%] -translate-y-[50%] w-[75%] aspect-square rounded-[3rem] md:rounded-[4.5rem] bg-gray-200 rotate-45 overflow-hidden shadow-2xl z-0 hover:scale-[1.02] transition-transform duration-500">
+            <img src="https://images.unsplash.com/photo-1504917595217-d4ce5eb92815?w=1000&auto=format&fit=crop" className="w-full h-full object-cover -rotate-45 scale-[1.4] translate-x-[-10%]" alt="Industrial facility" />
+            <div className="absolute inset-0 bg-black/10"></div>
+          </div>
+        </motion.div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 
       {/* Clientele */}
