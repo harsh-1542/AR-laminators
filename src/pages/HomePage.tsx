@@ -13,6 +13,7 @@ import { CertificationsStrip } from '../components/CertificationsStrip';
 import { ParallaxImageDivider } from '../components/ParallaxImageDivider';
 import { ProductsAnimate } from './ProductsAnimate';
 import { ProductsModel } from './ProductsModel';
+import { ApplicationAreasNew } from '../components/ApplicationAreasNew';
 
 export function HomePage() {
   // const factoryImage = "https://images.unsplash.com/photo-1675093022653-59233299f8ba?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGVtaWNhbCUyMG1hbnVmYWN0dXJpbmclMjBmYWNpbGl0eSUyMHBsYW50fGVufDF8fHx8MTc3NDcyMDgwN3ww&ixlib=rb-4.1.0&q=80&w=1080";
@@ -20,21 +21,26 @@ export function HomePage() {
   return (
     <div>
       <HeroSection />
-      <ClientLogos />
-      {/* <AboutSnapshot /> */}
-      <ParallaxImageDivider />
-      {/* <ProductCategories /> */}
-      {/* <FeaturedProducts /> */}
-      {/* demo */}
-      <ProductsAnimate />
-      <ProductsModel/>
-      <ApplicationAreas />
-      <Services />
-      <TechnicalProcess />
-      <WhyChooseUs />
-      <CTABanner />
-      {/* <ContactPreview />
-      <CertificationsStrip /> */}
+      
+      {/* Content wrapper with solid background and higher z-index to slide over the sticky Hero */}
+      <div className="relative z-10 bg-[#F5F0E8]">
+        <ClientLogos />
+        {/* <AboutSnapshot /> */}
+        <ParallaxImageDivider />
+        {/* <ProductCategories /> */}
+        {/* <FeaturedProducts /> */}
+        {/* demo */}
+        <ProductsAnimate />
+        {/* <ProductsModel/> */}
+        <ApplicationAreas />
+        <ApplicationAreasNew />
+        <Services />
+        <TechnicalProcess />
+        <WhyChooseUs />
+        <CTABanner />
+        {/* <ContactPreview />
+        <CertificationsStrip /> */}
+      </div>
     </div>
   );
 }

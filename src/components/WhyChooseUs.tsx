@@ -18,6 +18,7 @@ function AnimatedCounter({ value, suffix = '', duration = 2 }: { value: number; 
   return <motion.span ref={ref}>{rounded}</motion.span>;
 }
 import { ImageWithFallback } from './figma/ImageWithFallback';
+import TiltedCard from './TiltedCard';
 
 const features = [
   {
@@ -125,14 +126,24 @@ export function WhyChooseUs() {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="relative w-full max-w-lg aspect-square lg:aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.4)] border border-white/10 group cursor-pointer flex items-center justify-center transition-all duration-700 hover:scale-[1.02] hover:-translate-y-2 hover:shadow-[0_25px_80px_rgba(0,0,0,0.5)] bg-black/20"
+              className="relative w-full max-w-lg aspect-square lg:aspect-[4/5] overflow-visible group cursor-pointer flex items-center justify-center transition-all duration-700"
             >
-              <ImageWithFallback
-                src="/images/skyscraper.png"
-                alt="Infrastructure Partner"
-                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-90 group-hover:opacity-100"
+              <TiltedCard 
+                imageSrc="/images/skyscraper.png"
+                altText="Infrastructure Partner"
+                captionText="Quality You Can Trust"
+                containerHeight="100%"
+                containerWidth="100%"
+                imageHeight="100%"
+                imageWidth="100%"
+                rotateAmplitude={12}
+                scaleOnHover={1.02}
+                showTooltip={true}
+                displayOverlayContent={true}
+                overlayContent={
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#5a1118]/80 via-transparent to-transparent opacity-80 mix-blend-multiply w-full h-full rounded-[40px]"></div>
+                }
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#5a1118]/80 via-transparent to-transparent opacity-80 mix-blend-multiply"></div>
             </motion.div>
           </div>
         </div>

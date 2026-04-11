@@ -1,6 +1,6 @@
 import { ImageWithFallback } from './figma/ImageWithFallback';
 import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion, AnimatePresence, useScroll, useTransform } from 'motion/react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
@@ -44,6 +44,9 @@ export function HeroSection() {
   const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState(0);
 
+  const { scrollY } = useScroll();
+  const bgY = useTransform(scrollY, [0, 1000], ['0%', '30%']);
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
@@ -62,7 +65,7 @@ export function HeroSection() {
   const slide = slides[currentSlide];
 
   return (
-    <section className="relative h-screen min-h-[600px]  overflow-hidden">
+    <section className="sticky top-0 h-screen min-h-[600px] overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 bg-black">
         <AnimatePresence>
@@ -74,11 +77,11 @@ export function HeroSection() {
             transition={{ duration: 0.8 }}
             className="absolute inset-0"
           >
-            <ImageWithFallback
-              src={slide.image}
-              alt={slide.headline}
-              className="w-full h-full object-cover"
-            />
+              <ImageWithFallback
+                src={slide.image}
+                alt={slide.headline}
+                className="w-full h-full object-cover"
+              />
             {/* Simple dark overlay for text readability */}
             <div className="absolute inset-0 bg-black/40" />
           </motion.div>
