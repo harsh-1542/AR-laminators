@@ -42,21 +42,37 @@ export function ApplicationAreasNew() {
       className="py-20 relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mb-4"
-        >
-          <div className="font-semibold mb-2" style={{ color: '#7C1823' }}>APPLICATION AREAS</div>
-          <h2 className="text-4xl font-bold text-black mb-6">
+        <div className="text-center mb-4">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            viewport={{ once: true }}
+            className="font-semibold mb-2 tracking-wider" style={{ color: '#7C1823' }}
+          >
+            APPLICATION AREAS
+          </motion.div>
+          
+          <motion.h2 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="text-4xl md:text-5xl font-bold text-gray-900 mb-6"
+          >
             Solutions for Every Environment
-          </h2>
-          <p className="text-lg text-black max-w-3xl mx-auto">
+          </motion.h2>
+          
+          <motion.p 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed"
+          >
             Our solutions are engineered to perform across diverse environments — from residential structures to critical national infrastructure.
-          </p>
-        </motion.div>
+          </motion.p>
+        </div>
 
         <div className="mt-12 w-full max-w-5xl mx-auto">
           <ScrollStack 

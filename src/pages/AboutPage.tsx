@@ -27,7 +27,8 @@ export function AboutPage() {
         style={{ 
           backgroundImage: 'url(/images/aboutpage.png)',
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundPosition: 'bottom',
+          backgroundAttachment: 'fixed',
           fontFamily: 'Montserrat, sans-serif' 
         }}
       >

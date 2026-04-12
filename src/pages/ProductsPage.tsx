@@ -59,7 +59,8 @@ export function ProductsPage() {
         style={{
           backgroundImage: `url(/images/productspage.png)`,
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundPosition: 'bottom',
+          backgroundAttachment: 'fixed',
           fontFamily: 'Montserrat, sans-serif'
         }}
       >

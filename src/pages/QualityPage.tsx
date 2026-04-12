@@ -37,6 +37,10 @@ export function QualityPage() {
         <ImageWithFallback
           src="https://images.unsplash.com/photo-1764675902997-56502dddd608?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwbWFudWZhY3R1cmluZyUyMGZhY2lsaXR5fGVufDF8fHx8MTc3MDQ2MjA5N3ww&ixlib=rb-4.1.0&q=80&w=1080"
           alt="Quality & Certifications"
+          style={{
+            backgroundPosition: 'bottom',
+            backgroundAttachment: 'fixed',
+          }}
           className="absolute inset-0 w-full h-full object-cover opacity-40"
         />
         <div className="relative max-w-7xl mx-auto px-4 h-full flex flex-col text-center  justify-center">

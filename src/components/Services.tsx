@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
+import Magnet from './Magnet';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -161,18 +162,20 @@ export function Services() {
         </div>
 
         <div className="text-center mt-8 pb-12 relative z-10">
-          <motion.button
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            onClick={() => navigate('/contact')}
-            className="px-10 py-4 text-lg rounded-lg font-semibold flex items-center gap-2 mx-auto transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 text-white"
-            style={{ backgroundColor: '#7C1823' }}
-          >
-            Schedule a Consultation
-            <ArrowRight className="w-6 h-6" />
-          </motion.button>
+          <Magnet padding={50} disabled={false} magnetStrength={2}>
+            <motion.button
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              onClick={() => navigate('/contact')}
+              className="px-10 py-4 text-lg rounded-lg font-semibold flex items-center gap-2 mx-auto transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 text-white"
+              style={{ backgroundColor: '#7C1823' }}
+            >
+              Schedule a Consultation
+              <ArrowRight className="w-6 h-6" />
+            </motion.button>
+          </Magnet>
         </div>
       </div>
     </section>
